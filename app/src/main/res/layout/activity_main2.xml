@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/ctb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="#ffffff"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways">
+
+                <LinearLayout
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+                        android:id="@+id/detail_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    app:layout_collapseMode="parallax" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="宝贝"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="评价"
+                        android:textColor="#d0d0d0" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="详情"
+                        android:textColor="#d0d0d0" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="推荐"
+                        android:textColor="#d0d0d0" />
+
+                </RadioGroup>
+
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <!--项目列表viewPager-->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linerTreasure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="今天，教育部新闻发言人续梅回应“翟天临涉嫌学术不端事件”称，教育部对此高度重视，第一时间要求有关方面迅速进行核查，北京市有关方面在督促和指导北京电影学院组织开展调查，北京大学也开展了相关核查工作。调查不仅涉及本人是否涉嫌学术不端，也涉及工作的其他各个环节是否存在问题。昨天，北电和北大相继发布阶段性核查声明。
+
+教育部再次重申一贯的鲜明态度——零容忍。绝对不能允许出现无视学术规矩，破坏学术规范，损害教育公平的行为。对于这些行为，坚决发现一起，核实一起，查处一起，绝不姑息。相信有关方面认真严肃进行后续核查工作，依法依规做出处理，第一时间向社会公布相关处理情况。"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/xxx1" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/xxx1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="今天，教育部新闻发言人续梅回应“翟天临涉嫌学术不端事件”称，教育部对此高度重视，第一时间要求有关方面迅速进行核查，北京市有关方面在督促和指导北京电影学院组织开展调查，北京大学也开展了相关核查工作。调查不仅涉及本人是否涉嫌学术不端，也涉及工作的其他各个环节是否存在问题。昨天，北电和北大相继发布阶段性核查声明。
+
+教育部再次重申一贯的鲜明态度——零容忍。绝对不能允许出现无视学术规矩，破坏学术规范，损害教育公平的行为。对于这些行为，坚决发现一起，核实一起，查处一起，绝不姑息。相信有关方面认真严肃进行后续核查工作，依法依规做出处理，第一时间向社会公布相关处理情况。"
+                    android:textSize="15sp" />
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linerComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="用户评价" />
+
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="今天，教育部新闻发言人续梅回应“翟天临涉嫌学术不端事件”称，教育部对此高度重视，第一时间要求有关方面迅速进行核查，北京市有关方面在督促和指导北京电影学院组织开展调查，北京大学也开展了相关核查工作。调查不仅涉及本人是否涉嫌学术不端，也涉及工作的其他各个环节是否存在问题。昨天，北电和北大相继发布阶段性核查声明。
+
+教育部再次重申一贯的鲜明态度——零容忍。绝对不能允许出现无视学术规矩，破坏学术规范，损害教育公平的行为。对于这些行为，坚决发现一起，核实一起，查处一起，绝不姑息。相信有关方面认真严肃进行后续核查工作，依法依规做出处理，第一时间向社会公布相关处理情况。"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linerDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="产品详情" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="今天，教育部新闻发言人续梅回应“翟天临涉嫌学术不端事件”称，教育部对此高度重视，第一时间要求有关方面迅速进行核查，北京市有关方面在督促和指导北京电影学院组织开展调查，北京大学也开展了相关核查工作。调查不仅涉及本人是否涉嫌学术不端，也涉及工作的其他各个环节是否存在问题。昨天，北电和北大相继发布阶段性核查声明。
+
+教育部再次重申一贯的鲜明态度——零容忍。绝对不能允许出现无视学术规矩，破坏学术规范，损害教育公平的行为。对于这些行为，坚决发现一起，核实一起，查处一起，绝不姑息。相信有关方面认真严肃进行后续核查工作，依法依规做出处理，第一时间向社会公布相关处理情况。"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linerRecommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="产品推荐" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="今天，教育部新闻发言人续梅回应“翟天临涉嫌学术不端事件”称，教育部对此高度重视，第一时间要求有关方面迅速进行核查，北京市有关方面在督促和指导北京电影学院组织开展调查，北京大学也开展了相关核查工作。调查不仅涉及本人是否涉嫌学术不端，也涉及工作的其他各个环节是否存在问题。昨天，北电和北大相继发布阶段性核查声明。
+
+教育部再次重申一贯的鲜明态度——零容忍。绝对不能允许出现无视学术规矩，破坏学术规范，损害教育公平的行为。对于这些行为，坚决发现一起，核实一起，查处一起，绝不姑息。相信有关方面认真严肃进行后续核查工作，依法依规做出处理，第一时间向社会公布相关处理情况。"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xxx1" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</FrameLayout>
