@@ -1,2 +1,2 @@
 # myAndroid
-Android初始化
+android仿淘宝详情页的展示列表
